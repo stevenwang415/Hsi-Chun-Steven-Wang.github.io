@@ -17,8 +17,12 @@
 
 				<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href=#header">Career</a></li>
-							<li><a href="#projects-section">Projects</a></li>
+							<li id="nav-career" class="active">
+								<a href="javascript:void(0)" onclick="openTab('career')">Career</a>
+							</li>
+							<li id="nav-projects">
+            					<a href="javascript:void(0)" onclick="openTab('projects')">Projects</a>
+        					</li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/hcstevenwang/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -27,13 +31,14 @@
 					</nav>
 
 				<div id="main">
-
+					<div id="career-tab" class="tab-content">
 						<section class="post">
 								<header class="major">
 									<h1>Career</h1>
 									<p>A summary of my professional journey in AI Development, Data Science, and Machine Learning Research.</p>
 								</header>
-
+								</section>
+					
 								<div style="margin-bottom: 2.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1.5rem;">
 									<h3 style="margin-bottom: 0.5rem;">AI Developer (Contract) — GearFactory.ai</h3>
 									<p><strong>Jul 2025 - Present</strong> | Remote</p>
@@ -90,86 +95,87 @@
 								</div>
 							</section>
 					
-							<article id="projects-section" class="post featured">
-								<header class="major">
-									<span class="date">Oct 2024 - Dec 2024</span>
-									<h2><a href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target = "_black">E-Commerce Predictive Analysis<br />
-									</a></h2>
-									<p>Built a machine learning-driven platform using AWS (S3, SageMaker, Lambda) to 
-										analyze customer behavior and predict purchasing trends. Improved product 
-										recommendation accuracy by 5%, showcasing expertise in data science, 
-										cloud computing, and predictive modeling for real-world applications.</p>
-								</header>
-								<a href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target = "_black" class="image main"><img src="images/E-Commerce.png" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target = "_black" class="button large">View Project</a></li>
-								</ul>
-							</article>
+							<div id="projects-tab" class="tab-content" style="display:none;">
+								<article class="post featured">
+									<header class="major">
+										<span class="date">Oct 2024 - Dec 2024</span>
+										<h2><a href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target = "_black">E-Commerce Predictive Analysis<br />
+										</a></h2>
+										<p>Built a machine learning-driven platform using AWS (S3, SageMaker, Lambda) to 
+											analyze customer behavior and predict purchasing trends. Improved product 
+											recommendation accuracy by 5%, showcasing expertise in data science, 
+											cloud computing, and predictive modeling for real-world applications.</p>
+									</header>
+									<a href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target = "_black" class="image main"><img src="images/E-Commerce.png" alt="" /></a>
+									<ul class="actions special">
+										<li><a href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target = "_black" class="button large">View Project</a></li>
+									</ul>
+								</article>
 
 						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">Oct 2024 - Dec 2024</span>
-										<h2><a href="https://github.com/stevenwang415/Suicide-Risk-Classification" target = "_black">Suicide Risk Classification<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/stevenwang415/Suicide-Risk-Classification" target = "_black" class="image fit"><img src="images/Suicide Risk.png" alt="" /></a>
-									<p>Developed a multi-class classification model using a fine-tuned BERT model to 
-										analyze the UMD Reddit Suicidality Dataset. Achieved 51% validation accuracy 
-										through advanced feature engineering (TF-IDF, Word2Vec) and hyperparameter tuning, 
-										demonstrating expertise in NLP, machine learning, and mental health AI applications.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/stevenwang415/Suicide-Risk-Classification" target = "_black" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Mar 2024 - May 2024</span>
-										<h2><a href="https://github.com/stevenwang415/Message_Queues_and_Communication" target = "_black">Message Queue and Communication<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/stevenwang415/Message_Queues_and_Communication" target = "_black" class="image fit"><img src="images/Message Queue.png" alt="" /></a>
-									<p>Designed and implemented a high-performance messaging system by containerizing RabbitMQ
-									   and ZeroMQ with Docker, enhancing system reliability and reducing integration bottlenecks. 
-									   This solution improved real-time data processing and scalability, demonstrating expertise 
-									   in distributed systems, cloud infrastructure, and backend optimization—key skills for 
-									   building robust enterprise applications.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/stevenwang415/Message_Queues_and_Communication" target = "_black" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Oct 2023 - Dec 2023</span>
-										<h2><a href="https://github.com/stevenwang415/Project_Predict_Amazon_StockPrice" target = "_black">Amazon Stock Price Prediction<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/stevenwang415/Project_Predict_Amazon_StockPrice" target = "_black" class="image fit"><img src="images/Amazon.jpg" alt="" /></a>
-									<p>Developed a time-series forecasting model to predict Amazon stock prices using historical 
-										data accessed via APIs. Leveraged machine learning algorithms to generate accurate weekly 
-										predictions, demonstrating strong skills in financial data analysis, predictive modeling, 
-										and Python-based data engineering.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/stevenwang415/Project_Predict_Amazon_StockPrice" target = "_black" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Nov 2021 - Jan 2022</span>
-										<h2><a href="https://github.com/stevenwang415/Project_Image_Classification" target = "_black">Multi-Class Classification<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/stevenwang415/Project_Image_Classification" target = "_black" class="image fit"><img src="images/Multiclass.jpg" alt="" /></a>
-									<p>Built deep learning models (InceptionV3, ResNet152V2) to classify images from a 20,000-image 
-										dataset, achieving top 8th place out of 44 teams in a Kaggle competition. Applied data 
-										augmentation, model ensembling, and feature extraction, showcasing expertise in computer 
-										vision, model optimization, and large-scale data processing.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/stevenwang415/Project_Image_Classification" target = "_black" class="button">View Project</a></li>
-									</ul>
-								</article>
-							</section>
+								<section class="posts">
+									<article>
+										<header>
+											<span class="date">Oct 2024 - Dec 2024</span>
+											<h2><a href="https://github.com/stevenwang415/Suicide-Risk-Classification" target = "_black">Suicide Risk Classification<br />
+											</a></h2>
+										</header>
+										<a href="https://github.com/stevenwang415/Suicide-Risk-Classification" target = "_black" class="image fit"><img src="images/Suicide Risk.png" alt="" /></a>
+										<p>Developed a multi-class classification model using a fine-tuned BERT model to 
+											analyze the UMD Reddit Suicidality Dataset. Achieved 51% validation accuracy 
+											through advanced feature engineering (TF-IDF, Word2Vec) and hyperparameter tuning, 
+											demonstrating expertise in NLP, machine learning, and mental health AI applications.</p>
+										<ul class="actions special">
+											<li><a href="https://github.com/stevenwang415/Suicide-Risk-Classification" target = "_black" class="button">View Project</a></li>
+										</ul>
+									</article>
+									<article>
+										<header>
+											<span class="date">Mar 2024 - May 2024</span>
+											<h2><a href="https://github.com/stevenwang415/Message_Queues_and_Communication" target = "_black">Message Queue and Communication<br />
+											</a></h2>
+										</header>
+										<a href="https://github.com/stevenwang415/Message_Queues_and_Communication" target = "_black" class="image fit"><img src="images/Message Queue.png" alt="" /></a>
+										<p>Designed and implemented a high-performance messaging system by containerizing RabbitMQ
+										   and ZeroMQ with Docker, enhancing system reliability and reducing integration bottlenecks. 
+										   This solution improved real-time data processing and scalability, demonstrating expertise 
+										   in distributed systems, cloud infrastructure, and backend optimization—key skills for 
+										   building robust enterprise applications.</p>
+										<ul class="actions special">
+											<li><a href="https://github.com/stevenwang415/Message_Queues_and_Communication" target = "_black" class="button">View Project</a></li>
+										</ul>
+									</article>
+									<article>
+										<header>
+											<span class="date">Oct 2023 - Dec 2023</span>
+											<h2><a href="https://github.com/stevenwang415/Project_Predict_Amazon_StockPrice" target = "_black">Amazon Stock Price Prediction<br />
+											</a></h2>
+										</header>
+										<a href="https://github.com/stevenwang415/Project_Predict_Amazon_StockPrice" target = "_black" class="image fit"><img src="images/Amazon.jpg" alt="" /></a>
+										<p>Developed a time-series forecasting model to predict Amazon stock prices using historical 
+											data accessed via APIs. Leveraged machine learning algorithms to generate accurate weekly 
+											predictions, demonstrating strong skills in financial data analysis, predictive modeling, 
+											and Python-based data engineering.</p>
+										<ul class="actions special">
+											<li><a href="https://github.com/stevenwang415/Project_Predict_Amazon_StockPrice" target = "_black" class="button">View Project</a></li>
+										</ul>
+									</article>
+									<article>
+										<header>
+											<span class="date">Nov 2021 - Jan 2022</span>
+											<h2><a href="https://github.com/stevenwang415/Project_Image_Classification" target = "_black">Multi-Class Classification<br />
+											</a></h2>
+										</header>
+										<a href="https://github.com/stevenwang415/Project_Image_Classification" target = "_black" class="image fit"><img src="images/Multiclass.jpg" alt="" /></a>
+										<p>Built deep learning models (InceptionV3, ResNet152V2) to classify images from a 20,000-image 
+											dataset, achieving top 8th place out of 44 teams in a Kaggle competition. Applied data 
+											augmentation, model ensembling, and feature extraction, showcasing expertise in computer 
+											vision, model optimization, and large-scale data processing.</p>
+										<ul class="actions special">
+											<li><a href="https://github.com/stevenwang415/Project_Image_Classification" target = "_black" class="button">View Project</a></li>
+										</ul>
+									</article>
+								</section>
 					</div>
 
 				<footer id="footer">
@@ -202,6 +208,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<script>
+		function openTab(tabName) {
+			// Hide both sections
+			document.getElementById('career-tab').style.display = 'none';
+			document.getElementById('projects-tab').style.display = 'none';
+			
+			// Reset active status on nav tabs
+			document.getElementById('nav-career').classList.remove('active');
+			document.getElementById('nav-projects').classList.remove('active');
+			
+			// Show selected section and set tab to active
+			document.getElementById(tabName + '-tab').style.display = 'block';
+			document.getElementById('nav-' + tabName).classList.add('active');
+			
+			// Scroll back to the header logo so it feels like a new page
+			window.scrollTo(0, document.getElementById('header').offsetTop);
+		}
+		</script>
 
 	</body>
 </html>
