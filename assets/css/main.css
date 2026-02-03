@@ -3457,7 +3457,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#intro {
-				padding: 3rem 4rem 2rem 4rem ;
+				padding: 3rem 2rem 2rem 2rem ;
 				min-height: auto;
 			}
 
@@ -3474,7 +3474,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#intro {
-				padding: 2.5rem 2rem 1.5rem 2rem ;
+				padding: 2.5rem 1.5rem 2rem 1.5rem ;
 				min-height: auto;
 			}
 
@@ -4719,3 +4719,12 @@ input, select, textarea {
 			  }
 			}
 
+			#intro {
+			  min-height: auto !important;
+			  padding: 4rem 2rem 3rem 2rem;
+			  align-items: flex-start;
+			}
+
+			#intro .inner {
+			  margin-top: 3rem;
+			}
