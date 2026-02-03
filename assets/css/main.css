@@ -4692,3 +4692,29 @@ input, select, textarea {
 		}
 
 	}
+
+
+			#projects-tab .posts {
+			  display: grid;
+			  grid-template-columns: repeat(2, 1fr);
+			  gap: 2rem;
+			}
+			
+			/* Ensure articles inside grid behave correctly */
+			#projects-tab .posts article {
+			  margin: 0;
+			}
+			
+			/* Keep featured project full width */
+			#projects-tab .post.featured {
+			  width: 100%;
+			  margin-bottom: 3rem;
+			}
+			
+			/* Mobile: stack projects */
+			@media screen and (max-width: 736px) {
+			  #projects-tab .posts {
+			    grid-template-columns: 1fr;
+			  }
+			}
+
