@@ -309,6 +309,50 @@
     .t-card li::before { content: "▸"; position: absolute; left: 0; color: var(--accent); }
     .t-card li:last-child { margin-bottom: 0; }
 
+    /* ---------- DNA helix & molecules ---------- */
+    #publication { overflow: hidden; }
+    .dna {
+      position: absolute; right: 4.5%; top: 50%; transform: translateY(-50%);
+      height: 420px; display: flex; flex-direction: column; justify-content: space-between;
+      pointer-events: none; z-index: 0;
+    }
+    .dna-rung {
+      position: relative; width: 130px; height: 2px;
+      background: linear-gradient(90deg, rgba(34, 211, 238, 0.5), rgba(148, 163, 184, 0.12), rgba(167, 139, 250, 0.5));
+      animation: helix 3.6s linear infinite;
+    }
+    .dna-rung i {
+      position: absolute; top: 50%; width: 9px; height: 9px; border-radius: 50%;
+      transform: translateY(-50%);
+    }
+    .dna-rung i:first-child { left: -4px; background: var(--accent); box-shadow: 0 0 10px rgba(34, 211, 238, 0.7); }
+    .dna-rung i:last-child { right: -4px; background: var(--accent-3); box-shadow: 0 0 10px rgba(167, 139, 250, 0.7); }
+    @keyframes helix { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
+    .dna-rung:nth-child(1)  { animation-delay: 0s; }
+    .dna-rung:nth-child(2)  { animation-delay: -0.3s; }
+    .dna-rung:nth-child(3)  { animation-delay: -0.6s; }
+    .dna-rung:nth-child(4)  { animation-delay: -0.9s; }
+    .dna-rung:nth-child(5)  { animation-delay: -1.2s; }
+    .dna-rung:nth-child(6)  { animation-delay: -1.5s; }
+    .dna-rung:nth-child(7)  { animation-delay: -1.8s; }
+    .dna-rung:nth-child(8)  { animation-delay: -2.1s; }
+    .dna-rung:nth-child(9)  { animation-delay: -2.4s; }
+    .dna-rung:nth-child(10) { animation-delay: -2.7s; }
+    .dna-rung:nth-child(11) { animation-delay: -3.0s; }
+    .dna-rung:nth-child(12) { animation-delay: -3.3s; }
+    .molecule {
+      position: absolute; color: var(--accent-2); opacity: 0.1; pointer-events: none; z-index: 0;
+      animation: floaty 14s ease-in-out infinite alternate;
+    }
+    .mol-1 { width: 120px; left: 3%; bottom: 8%; }
+    .mol-2 { width: 78px; left: 12%; top: 10%; animation-delay: -7s; color: var(--accent); }
+    @keyframes floaty {
+      from { transform: translateY(0) rotate(0deg); }
+      to   { transform: translateY(-26px) rotate(24deg); }
+    }
+    @media (max-width: 1180px) { .dna { display: none; } }
+    @media (prefers-reduced-motion: reduce) { .dna-rung, .molecule { animation: none; } }
+
     /* ---------- Publication & education ---------- */
     .pub-card { padding: 34px 36px; max-width: 860px; overflow: hidden; }
     .pub-card::after {
@@ -712,6 +756,22 @@
   </section>
 
   <section id="publication" class="alt">
+    <div class="dna" aria-hidden="true">
+      <div class="dna-rung"><i></i><i></i></div>
+      <div class="dna-rung"><i></i><i></i></div>
+      <div class="dna-rung"><i></i><i></i></div>
+      <div class="dna-rung"><i></i><i></i></div>
+      <div class="dna-rung"><i></i><i></i></div>
+      <div class="dna-rung"><i></i><i></i></div>
+      <div class="dna-rung"><i></i><i></i></div>
+      <div class="dna-rung"><i></i><i></i></div>
+      <div class="dna-rung"><i></i><i></i></div>
+      <div class="dna-rung"><i></i><i></i></div>
+      <div class="dna-rung"><i></i><i></i></div>
+      <div class="dna-rung"><i></i><i></i></div>
+    </div>
+    <svg class="molecule mol-1" aria-hidden="true" viewBox="0 0 100 100"><polygon points="50,8 88,30 88,70 50,92 12,70 12,30" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="8" r="5" fill="currentColor"/><circle cx="88" cy="70" r="5" fill="currentColor"/><circle cx="12" cy="70" r="5" fill="currentColor"/></svg>
+    <svg class="molecule mol-2" aria-hidden="true" viewBox="0 0 100 100"><polygon points="50,8 88,30 88,70 50,92 12,70 12,30" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="88" cy="30" r="5" fill="currentColor"/><circle cx="50" cy="92" r="5" fill="currentColor"/></svg>
     <div class="container">
       <div class="reveal">
         <div class="section-head"><div class="section-label">04 / research</div></div>
