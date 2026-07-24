@@ -1,241 +1,597 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Career - Hsi-Chun (Steven) Wang</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper" class="fade-in">
-			
-			<div id="intro">
-        		<h1>Hsi-Chun (Steven)<br />
-       			Portfolio</h1>
-        		<p>Machine Learning Engineer / Data Scientist skilled in Python, R, SQL</p>
-        		<ul class="actions">
-            		<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-        		</ul>
-    		</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hsi-Chun (Steven) Wang — Machine Learning Engineer</title>
+  <meta name="description" content="Portfolio of Hsi-Chun (Steven) Wang, Machine Learning Engineer &amp; Data Scientist — LLM development, NLP, cloud ML pipelines (AWS), Python, R, SQL." />
+  <meta property="og:title" content="Hsi-Chun (Steven) Wang — Machine Learning Engineer" />
+  <meta property="og:description" content="Machine Learning Engineer &amp; Data Scientist — LLMs, NLP, and cloud ML pipelines." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
+  <style>
+    :root {
+      --bg: #070b14;
+      --bg-alt: #0c1120;
+      --card: #101729;
+      --card-hover: #141d33;
+      --border: rgba(148, 163, 184, 0.14);
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #22d3ee;
+      --accent-2: #818cf8;
+      --gradient: linear-gradient(120deg, #22d3ee, #818cf8);
+      --radius: 14px;
+      --font-display: "Space Grotesk", sans-serif;
+      --font-body: "Inter", sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    ::selection { background: rgba(34, 211, 238, 0.3); }
+    a { color: var(--accent); text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-			<header id="header">
-				<a href="index.html" class="logo">Hsi-Chun (Steven) Wang</a>
-			</header>
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-				<nav id="nav">
-						<ul class="links">
-							<li id="nav-career" class="active">
-								<a href="javascript:void(0)" onclick="openTab('career')">Career</a>
-							</li>
-							<li id="nav-projects">
-            					<a href="javascript:void(0)" onclick="openTab('projects')">Projects</a>
-        					</li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/hcstevenwang/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/stevenwang415" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-		</div>
-				<div id="main">
-					<div id="career-tab" class="tab-content">
-						<section class="post">
-							<header class="major">
-								<h1>Career</h1>
-								<p>AI & Data Scientist with 5+ years of Python experience and 2+ years of hands-on work in machine learning and AI research.</p>
-							</header>
-						</section>
-				
-						<div style="margin-bottom: 2.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1.5rem;">
-							<h3 style="margin-bottom: 0.5rem;">Machine Learning Research Assistant (LLM Development) — University of Pittsburgh</h3>
-							<p><strong>Apr 2025 - Present</strong> | Remote</p>
-							<ul>
-								<li>Designed and executed an LLM evaluation pipeline (OpenAI GPT API) for 2,700 drug compounds, employing rigorous correlation analysis to validate the added value of LitSense-backed evidence over GPT-only scores.</li>
-								<li>Developed custom regression architecture for LLM4SD model, improving the R-squared value by 0.12, and optimized hyperparameters, enhancing predictive accuracy by 18%.</li>
-							</ul>
-						</div>
+    /* ---------- Nav ---------- */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(7, 11, 20, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-family: var(--font-display); font-weight: 700; font-size: 1.05rem;
+      color: var(--text); letter-spacing: 0.02em;
+    }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links a {
+      color: var(--muted); font-size: 0.92rem; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      padding: 8px 18px; border: 1px solid rgba(34, 211, 238, 0.4);
+      border-radius: 999px; color: var(--accent) !important;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .nav-cta:hover { background: rgba(34, 211, 238, 0.1); box-shadow: 0 0 18px rgba(34, 211, 238, 0.25); }
+    .nav-toggle {
+      display: none; background: none; border: none; color: var(--text);
+      font-size: 1.5rem; cursor: pointer; line-height: 1;
+    }
 
-						<div style="margin-bottom: 2.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1.5rem;">
-							<h3 style="margin-bottom: 0.5rem;">Machine Learning Engineer (Contract) — GearFactory.ai</h3>
-								<p><strong>Jul 2025 - Feb 2026</strong> | Remote</p>
-									<ul>
-										<li>Engineered a scalable text-mining pipeline using AWS (S3, Athena) and Python to process a 35-year archive of historical Chinese newspaper archives, enabling geopolitical sentiment analysis.</li>
-										<li>Fine-tuned and evaluated advanced LLMs (GPT-4o series) on the multi-decade corpus, utilizing correlation analysis to validate model output consistency and detect geopolitical sentiment anomalies.</li>
-									</ul>
-						</div>
+    /* ---------- Hero ---------- */
+    header.hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      position: relative;
+      background:
+        radial-gradient(ellipse 60% 50% at 75% 15%, rgba(129, 140, 248, 0.15), transparent),
+        radial-gradient(ellipse 55% 45% at 20% 80%, rgba(34, 211, 238, 0.10), transparent),
+        var(--bg);
+    }
+    .hero-grid-bg {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 75%);
+    }
+    .hero-content { position: relative; padding: 120px 0 80px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.82rem; color: var(--accent); font-weight: 500;
+      border: 1px solid rgba(34, 211, 238, 0.3); border-radius: 999px;
+      padding: 6px 14px; margin-bottom: 24px;
+      background: rgba(34, 211, 238, 0.06);
+    }
+    .hero-badge::before {
+      content: ""; width: 8px; height: 8px; border-radius: 50%;
+      background: #34d399; box-shadow: 0 0 8px #34d399;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 700; line-height: 1.1; letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .hero h1 .grad {
+      background: var(--gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .hero p.tagline {
+      font-size: clamp(1rem, 2vw, 1.2rem); color: var(--muted);
+      max-width: 640px; margin-bottom: 36px;
+    }
+    .hero p.tagline strong { color: var(--text); font-weight: 600; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .btn {
+      font-family: var(--font-display); font-weight: 600; font-size: 0.95rem;
+      padding: 13px 28px; border-radius: 10px; display: inline-block;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary {
+      background: var(--gradient); color: #06121a;
+      box-shadow: 0 4px 24px rgba(34, 211, 238, 0.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(34, 211, 238, 0.5); }
+    .btn-ghost { border: 1px solid var(--border); color: var(--text); }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+    .hero-socials { display: flex; gap: 14px; margin-top: 40px; }
+    .hero-socials a, .contact-socials a {
+      width: 42px; height: 42px; border: 1px solid var(--border); border-radius: 10px;
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--muted); transition: all 0.2s;
+    }
+    .hero-socials a:hover, .contact-socials a:hover {
+      color: var(--accent); border-color: var(--accent);
+      transform: translateY(-2px); box-shadow: 0 4px 16px rgba(34, 211, 238, 0.2);
+    }
+    .hero-socials svg, .contact-socials svg { width: 20px; height: 20px; fill: currentColor; }
 
-						<div style="margin-bottom: 2.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1.5rem;">
-							<h3 style="margin-bottom: 0.5rem;">Graduate Teaching Assistant (Data Science) — University of Maryland</h3>
-							<p><strong>Sep 2024 - Dec 2024</strong> | College Park, MD</p>
-							<ul>
-								<li>Guided 100+ students in data analytics, focusing on data modeling and visualization using Python (Matplotlib, Seaborn), applying clustering techniques to analyze datasets.</li>
-								<li>Facilitated cross-functional workshops using Pandas, helping 100+ students improve project scores to 85% (from 65%) by applying regression for trend validation and forecasting.</li>
-							</ul>
-						</div>
+    /* ---------- Sections ---------- */
+    section { padding: 96px 0; }
+    section.alt { background: var(--bg-alt); }
+    .section-label {
+      font-family: var(--font-display); font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent);
+      margin-bottom: 12px;
+    }
+    h2.section-title {
+      font-family: var(--font-display); font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 700; letter-spacing: -0.01em; margin-bottom: 18px;
+    }
+    .section-intro { color: var(--muted); max-width: 660px; margin-bottom: 48px; }
 
-						<div style="margin-bottom: 2.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1.5rem;">
-							<h3 style="margin-bottom: 0.5rem;">Data Scientist Intern (Marketing Analytics) — T-Heart Ltd</h3>
-							<p><strong>Jun 2022 - Aug 2023</strong> | Kaohsiung, Taiwan</p>
-							<ul>
-								<li>Transformed raw order data into actionable insights through Python-driven data manipulation, enabling the identification of top-selling products and informing targeted marketing campaigns.</li>
-								<li>Collaborated with the marketing team to build time-series regression models, improving forecasting accuracy by 15% over six months.</li>
-							</ul>
-						</div>
+    /* ---------- About / stats ---------- */
+    .stats {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px; margin-top: 48px;
+    }
+    .stat {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px 24px;
+    }
+    .stat .num {
+      font-family: var(--font-display); font-size: 2rem; font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .stat .label { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
 
-						<div style="margin-bottom: 2.5rem; border-bottom: 1px solid #ddd; padding-bottom: 1.5rem;">
-							<h3 style="margin-bottom: 0.5rem;">Remote Volunteer (Data Science / Deep Learning) — University of Pittsburgh</h3>
-							<p><strong>Jun 2022 - Jan 2023</strong> | Remote</p>
-							<ul>
-								<li>Enhanced CNN models using MATLAB and mathematics to optimize image processing for cancer spheroid viability.</li>
-								<li>Ensured high-quality data inputs for medical assessments through data modeling techniques.</li>
-								<li>Engineered scalable data workflows to handle large datasets, improving data quality and model performance.</li>
-							</ul>
-						</div>
+    /* ---------- Skills ---------- */
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    .skill-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px 24px; transition: transform 0.25s, border-color 0.25s;
+    }
+    .skill-card:hover { transform: translateY(-4px); border-color: rgba(34, 211, 238, 0.4); }
+    .skill-card h3 {
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 600;
+      margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+    }
+    .skill-card h3 .dot { width: 10px; height: 10px; border-radius: 3px; background: var(--gradient); display: inline-block; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      font-size: 0.8rem; color: var(--muted); border: 1px solid var(--border);
+      border-radius: 999px; padding: 4px 12px; background: rgba(148, 163, 184, 0.05);
+    }
 
-						<div style="margin-bottom: 2.5rem;">
-							<h3 style="margin-bottom: 0.5rem;">Research Assistant (Deep Learning) — National Taiwan University</h3>
-							<p><strong>Sep 2021 - Jun 2022</strong> | Taipei, Taiwan</p>
-							<ul>
-								<li>Implemented an automated labeling system using bounding boxes on 5,000 images, decreasing annotation errors to below 1%.</li>
-								<li>Trained PyTorch AI models for image segmentation and detection of construction hazards, achieving a 3% accuracy improvement through optimized model performance.</li>
-							</ul>
-						</div>
-					</div>
-						<div id="projects-tab" class="tab-content" style="display:none;">
-							<article class="post featured">
-								<header class="major">
-									<span class="date">Oct 2024 - Dec 2024</span>
-									<h2><a href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target = "_black">E-Commerce Predictive Analysis<br />
-									</a></h2>
-									<p>Built a machine learning-driven platform using AWS (S3, SageMaker, Lambda) to 
-										analyze customer behavior and predict purchasing trends. Improved product 
-										recommendation accuracy by 5%, showcasing expertise in data science, 
-										cloud computing, and predictive modeling for real-world applications.</p>
-								</header>
-								<a href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target = "_black" class="image main"><img src="images/E-Commerce.png" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target = "_black" class="button large">View Project</a></li>
-								</ul>
-							</article>
+    /* ---------- Experience timeline ---------- */
+    .timeline { position: relative; margin-left: 8px; }
+    .timeline::before {
+      content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent-2), transparent);
+      opacity: 0.5;
+    }
+    .t-item { position: relative; padding: 0 0 44px 36px; }
+    .t-item:last-child { padding-bottom: 0; }
+    .t-item::before {
+      content: ""; position: absolute; left: -6px; top: 6px;
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--bg); border: 3px solid var(--accent);
+      box-shadow: 0 0 12px rgba(34, 211, 238, 0.5);
+    }
+    .t-item .t-date {
+      font-family: var(--font-display); font-size: 0.82rem; font-weight: 600;
+      color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .t-item h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; margin: 6px 0 2px; }
+    .t-item .t-org { color: var(--muted); font-size: 0.92rem; margin-bottom: 12px; }
+    .t-item ul { list-style: none; }
+    .t-item li {
+      color: var(--muted); font-size: 0.94rem; padding-left: 20px; position: relative; margin-bottom: 8px;
+    }
+    .t-item li::before { content: "▸"; position: absolute; left: 0; color: var(--accent); }
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">Oct 2024 - Dec 2024</span>
-										<h2><a href="https://github.com/stevenwang415/Suicide-Risk-Classification" target = "_black">Suicide Risk Classification<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/stevenwang415/Suicide-Risk-Classification" target = "_black" class="image fit"><img src="images/Suicide Risk.png" alt="" /></a>
-									<p>Developed a multi-class classification model using a fine-tuned BERT model to 
-										analyze the UMD Reddit Suicidality Dataset. Achieved 51% validation accuracy 
-										through advanced feature engineering (TF-IDF, Word2Vec) and hyperparameter tuning, 
-										demonstrating expertise in NLP, machine learning, and mental health AI applications.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/stevenwang415/Suicide-Risk-Classification" target = "_black" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Mar 2024 - May 2024</span>
-										<h2><a href="https://github.com/stevenwang415/Message_Queues_and_Communication" target = "_black">Message Queue<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/stevenwang415/Message_Queues_and_Communication" target = "_black" class="image fit"><img src="images/Message Queue.png" alt="" /></a>
-									<p>Designed and implemented a high-performance messaging system by containerizing RabbitMQ
-										and ZeroMQ with Docker, enhancing system reliability and reducing integration bottlenecks. 
-										This solution improved real-time data processing and scalability, demonstrating expertise 
-										in distributed systems, cloud infrastructure, and backend optimization—key skills for 
-										building robust enterprise applications.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/stevenwang415/Message_Queues_and_Communication" target = "_black" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Oct 2023 - Dec 2023</span>
-										<h2><a href="https://github.com/stevenwang415/Project_Predict_Amazon_StockPrice" target = "_black">Amazon Stock Price Prediction<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/stevenwang415/Project_Predict_Amazon_StockPrice" target = "_black" class="image fit"><img src="images/Amazon.jpg" alt="" /></a>
-									<p>Developed a time-series forecasting model to predict Amazon stock prices using historical 
-										data accessed via APIs. Leveraged machine learning algorithms to generate accurate weekly 
-										predictions, demonstrating strong skills in financial data analysis, predictive modeling, 
-										and Python-based data engineering.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/stevenwang415/Project_Predict_Amazon_StockPrice" target = "_black" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Nov 2021 - Jan 2022</span>
-										<h2><a href="https://github.com/stevenwang415/Project_Image_Classification" target = "_black">Multi-Class Classification<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/stevenwang415/Project_Image_Classification" target = "_black" class="image fit"><img src="images/Multiclass.jpg" alt="" /></a>
-									<p>Built deep learning models (InceptionV3, ResNet152V2) to classify images from a 20,000-image 
-										dataset, achieving top 8th place out of 44 teams in a Kaggle competition. Applied data 
-										augmentation, model ensembling, and feature extraction, showcasing expertise in computer 
-										vision, model optimization, and large-scale data processing.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/stevenwang415/Project_Image_Classification" target = "_black" class="button">View Project</a></li>
-									</ul>
-								</article>
-									
-							</section>
-						</div>
-				</div>
+    /* ---------- Projects ---------- */
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .project-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    }
+    .project-card:hover {
+      transform: translateY(-6px); border-color: rgba(34, 211, 238, 0.45);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    }
+    .project-card.featured { grid-column: 1 / -1; }
+    @media (min-width: 780px) {
+      .project-card.featured { flex-direction: row; }
+      .project-card.featured .thumb { width: 48%; }
+      .project-card.featured .thumb img { height: 100%; }
+      .project-card.featured .body { width: 52%; }
+    }
+    .thumb { position: relative; overflow: hidden; background: #0a0f1d; }
+    .thumb img {
+      width: 100%; height: 200px; object-fit: cover;
+      transition: transform 0.4s ease; opacity: 0.92;
+    }
+    .project-card:hover .thumb img { transform: scale(1.05); opacity: 1; }
+    .project-card .body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+    .project-card .date { font-size: 0.78rem; color: var(--accent); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .project-card h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; margin: 8px 0 10px; }
+    .project-card h3 a { color: var(--text); transition: color 0.2s; }
+    .project-card h3 a:hover { color: var(--accent); }
+    .project-card p { color: var(--muted); font-size: 0.92rem; flex: 1; }
+    .project-card .tags { margin: 16px 0; }
+    .project-link {
+      font-family: var(--font-display); font-weight: 600; font-size: 0.9rem;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .project-link::after { content: "→"; transition: transform 0.2s; }
+    .project-link:hover::after { transform: translateX(4px); }
 
-				<footer id="footer">
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>Jersey City, NJ, 07306</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p>(240) 468-8390</p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p>hsichunw@gmail.com</p>
-							</section>
-						</section>
-					</footer>
+    /* ---------- Contact ---------- */
+    .contact-wrap { text-align: center; max-width: 640px; margin: 0 auto; }
+    .contact-items {
+      display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+      margin: 40px 0;
+    }
+    .contact-item .c-label {
+      font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 4px;
+    }
+    .contact-item .c-value { font-weight: 500; color: var(--text); }
+    .contact-item .c-value a { color: var(--text); transition: color 0.2s; }
+    .contact-item .c-value a:hover { color: var(--accent); }
+    .contact-socials { display: flex; justify-content: center; gap: 14px; }
 
-				<div id="copyright">
-						<ul><li>&copy; Hsi-Chun (Steven) Wang</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+    footer {
+      border-top: 1px solid var(--border); padding: 28px 0;
+      text-align: center; color: var(--muted); font-size: 0.85rem;
+    }
 
-			</div>
+    /* ---------- Reveal animation ---------- */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
 
-		<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    /* ---------- Mobile nav ---------- */
+    @media (max-width: 720px) {
+      .nav-toggle { display: block; }
+      .nav-links {
+        position: absolute; top: 64px; left: 0; right: 0;
+        flex-direction: column; gap: 0;
+        background: rgba(7, 11, 20, 0.97); border-bottom: 1px solid var(--border);
+        display: none; padding: 12px 0;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; text-align: center; }
+      .nav-links a { display: block; padding: 12px 0; }
+      .nav-cta { border: none; }
+      section { padding: 72px 0; }
+    }
+  </style>
+</head>
+<body>
 
-		<script>
-		function openTab(tabName) {
-			// Hide both sections
-			document.getElementById('career-tab').style.display = 'none';
-			document.getElementById('projects-tab').style.display = 'none';
-			
-			// Reset active status on nav tabs
-			document.getElementById('nav-career').classList.remove('active');
-			document.getElementById('nav-projects').classList.remove('active');
-			
-			// Show selected section and set tab to active
-			document.getElementById(tabName + '-tab').style.display = 'block';
-			document.getElementById('nav-' + tabName).classList.add('active');
-			
-			// Scroll back to the header logo so it feels like a new page
-			window.scrollTo(0, document.getElementById('header').offsetTop);
-		}
-		</script>
+  <nav>
+    <div class="nav-inner">
+      <a href="#top" class="logo">Steven<span>.Wang</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+      </ul>
+    </div>
+  </nav>
 
-	</body>
+  <header class="hero" id="top">
+    <div class="hero-grid-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">Open to Machine Learning &amp; Data Science roles</div>
+      <h1>Hsi-Chun (Steven) Wang<br /><span class="grad">Machine Learning Engineer</span></h1>
+      <p class="tagline">
+        I build <strong>LLM evaluation pipelines</strong>, <strong>NLP systems</strong>, and
+        <strong>cloud-scale ML workflows</strong> — turning messy real-world data into models
+        that ship. Python · R · SQL · PyTorch · AWS.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View my work</a>
+        <a href="#contact" class="btn btn-ghost">Contact me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/hcstevenwang/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-3.37-4-3.11-4 0v5.6h-3v-11h3v1.77c1.4-2.59 7-2.78 7 2.48v6.75z"/></svg>
+        </a>
+        <a href="https://github.com/stevenwang415" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 0c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.14 3 .4c2.29-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.21.7.82.58 4.77-1.59 8.2-6.09 8.2-11.39 0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="mailto:hsichunw@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M20 4h-16c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-12c0-1.1-.9-2-2-2zm0 4l-8 5-8-5v-2l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">About</div>
+        <h2 class="section-title">AI &amp; data scientist who ships end-to-end.</h2>
+        <p class="section-intro">
+          I'm a Machine Learning Engineer and Data Scientist based in Jersey City, NJ, with 5+ years
+          of Python experience and 2+ years of hands-on machine learning and AI research. My recent
+          work centers on large language models — building evaluation pipelines, fine-tuning frontier
+          models, and validating outputs with rigorous statistical analysis — alongside scalable data
+          engineering on AWS.
+        </p>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><div class="num">5+</div><div class="label">Years of Python experience</div></div>
+        <div class="stat"><div class="num">2+</div><div class="label">Years in ML &amp; AI research</div></div>
+        <div class="stat"><div class="num">2,700</div><div class="label">Drug compounds evaluated with LLM pipeline</div></div>
+        <div class="stat"><div class="num">Top 8</div><div class="label">of 44 teams — Kaggle competition</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="alt">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Skills</div>
+        <h2 class="section-title">Toolbox</h2>
+        <p class="section-intro">The languages, frameworks, and platforms I use to take models from notebook to production.</p>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-card">
+          <h3><span class="dot"></span>Languages</h3>
+          <div class="tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">SQL</span><span class="tag">MATLAB</span></div>
+        </div>
+        <div class="skill-card">
+          <h3><span class="dot"></span>Machine Learning &amp; LLMs</h3>
+          <div class="tags"><span class="tag">PyTorch</span><span class="tag">GPT-4o fine-tuning</span><span class="tag">OpenAI API</span><span class="tag">BERT</span><span class="tag">scikit-learn</span><span class="tag">CNNs</span></div>
+        </div>
+        <div class="skill-card">
+          <h3><span class="dot"></span>NLP &amp; Data Science</h3>
+          <div class="tags"><span class="tag">Text mining</span><span class="tag">TF-IDF</span><span class="tag">Word2Vec</span><span class="tag">Time-series forecasting</span><span class="tag">Pandas</span><span class="tag">Matplotlib / Seaborn</span></div>
+        </div>
+        <div class="skill-card">
+          <h3><span class="dot"></span>Cloud &amp; Infrastructure</h3>
+          <div class="tags"><span class="tag">AWS S3</span><span class="tag">SageMaker</span><span class="tag">Lambda</span><span class="tag">Athena</span><span class="tag">Docker</span><span class="tag">RabbitMQ / ZeroMQ</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Experience</div>
+        <h2 class="section-title">Where I've worked</h2>
+      </div>
+      <div class="timeline">
+        <div class="t-item reveal">
+          <div class="t-date">Apr 2025 – Present</div>
+          <h3>Machine Learning Research Assistant (LLM Development)</h3>
+          <div class="t-org">University of Pittsburgh · Remote</div>
+          <ul>
+            <li>Designed and executed an LLM evaluation pipeline (OpenAI GPT API) for 2,700 drug compounds, employing rigorous correlation analysis to validate the added value of LitSense-backed evidence over GPT-only scores.</li>
+            <li>Developed custom regression architecture for the LLM4SD model, improving R² by 0.12, and optimized hyperparameters, enhancing predictive accuracy by 18%.</li>
+          </ul>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-date">Jul 2025 – Feb 2026</div>
+          <h3>Machine Learning Engineer (Contract)</h3>
+          <div class="t-org">GearFactory.ai · Remote</div>
+          <ul>
+            <li>Engineered a scalable text-mining pipeline using AWS (S3, Athena) and Python to process a 35-year archive of historical Chinese newspapers, enabling geopolitical sentiment analysis.</li>
+            <li>Fine-tuned and evaluated advanced LLMs (GPT-4o series) on the multi-decade corpus, using correlation analysis to validate model output consistency and detect geopolitical sentiment anomalies.</li>
+          </ul>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-date">Sep 2024 – Dec 2024</div>
+          <h3>Graduate Teaching Assistant (Data Science)</h3>
+          <div class="t-org">University of Maryland · College Park, MD</div>
+          <ul>
+            <li>Guided 100+ students in data analytics, focusing on data modeling and visualization with Python (Matplotlib, Seaborn) and clustering techniques.</li>
+            <li>Facilitated cross-functional workshops using Pandas, helping 100+ students raise project scores from 65% to 85% by applying regression for trend validation and forecasting.</li>
+          </ul>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-date">Jun 2022 – Aug 2023</div>
+          <h3>Data Scientist Intern (Marketing Analytics)</h3>
+          <div class="t-org">T-Heart Ltd · Kaohsiung, Taiwan</div>
+          <ul>
+            <li>Transformed raw order data into actionable insights through Python-driven data manipulation, identifying top-selling products and informing targeted marketing campaigns.</li>
+            <li>Collaborated with the marketing team to build time-series regression models, improving forecasting accuracy by 15% over six months.</li>
+          </ul>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-date">Jun 2022 – Jan 2023</div>
+          <h3>Remote Volunteer (Data Science / Deep Learning)</h3>
+          <div class="t-org">University of Pittsburgh · Remote</div>
+          <ul>
+            <li>Enhanced CNN models using MATLAB to optimize image processing for cancer spheroid viability assessment.</li>
+            <li>Engineered scalable data workflows for large datasets, improving data quality and model performance.</li>
+          </ul>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-date">Sep 2021 – Jun 2022</div>
+          <h3>Research Assistant (Deep Learning)</h3>
+          <div class="t-org">National Taiwan University · Taipei, Taiwan</div>
+          <ul>
+            <li>Implemented an automated labeling system using bounding boxes on 5,000 images, decreasing annotation errors to below 1%.</li>
+            <li>Trained PyTorch models for image segmentation and detection of construction hazards, achieving a 3% accuracy improvement through model optimization.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="alt">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Projects</div>
+        <h2 class="section-title">Selected work</h2>
+        <p class="section-intro">Hands-on builds spanning cloud ML platforms, NLP, distributed systems, and computer vision.</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card featured reveal">
+          <div class="thumb"><img src="images/e-commerce.webp" alt="E-Commerce Predictive Analysis dashboard" loading="lazy" /></div>
+          <div class="body">
+            <span class="date">Oct 2024 – Dec 2024</span>
+            <h3><a href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target="_blank" rel="noopener">E-Commerce Predictive Analysis on AWS</a></h3>
+            <p>Machine learning–driven platform built on AWS (S3, SageMaker, Lambda) to analyze customer behavior and predict purchasing trends — improving product recommendation accuracy by 5% end to end, from raw data to deployed model.</p>
+            <div class="tags"><span class="tag">AWS SageMaker</span><span class="tag">Lambda</span><span class="tag">S3</span><span class="tag">Predictive modeling</span></div>
+            <a class="project-link" href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="thumb"><img src="images/suicide-risk.webp" alt="Suicide risk classification NLP project" loading="lazy" /></div>
+          <div class="body">
+            <span class="date">Oct 2024 – Dec 2024</span>
+            <h3><a href="https://github.com/stevenwang415/Suicide-Risk-Classification" target="_blank" rel="noopener">Suicide Risk Classification</a></h3>
+            <p>Multi-class classifier using fine-tuned BERT on the UMD Reddit Suicidality Dataset, with advanced feature engineering (TF-IDF, Word2Vec) and hyperparameter tuning for mental-health AI applications.</p>
+            <div class="tags"><span class="tag">BERT</span><span class="tag">NLP</span><span class="tag">TF-IDF</span><span class="tag">Word2Vec</span></div>
+            <a class="project-link" href="https://github.com/stevenwang415/Suicide-Risk-Classification" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="thumb"><img src="images/message-queue.webp" alt="Message queue system architecture" loading="lazy" /></div>
+          <div class="body">
+            <span class="date">Mar 2024 – May 2024</span>
+            <h3><a href="https://github.com/stevenwang415/Message_Queues_and_Communication" target="_blank" rel="noopener">Message Queues &amp; Communication</a></h3>
+            <p>High-performance messaging system containerizing RabbitMQ and ZeroMQ with Docker — improving real-time data processing, reliability, and scalability across distributed services.</p>
+            <div class="tags"><span class="tag">RabbitMQ</span><span class="tag">ZeroMQ</span><span class="tag">Docker</span><span class="tag">Distributed systems</span></div>
+            <a class="project-link" href="https://github.com/stevenwang415/Message_Queues_and_Communication" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="thumb"><img src="images/amazon.webp" alt="Amazon stock price prediction charts" loading="lazy" /></div>
+          <div class="body">
+            <span class="date">Oct 2023 – Dec 2023</span>
+            <h3><a href="https://github.com/stevenwang415/Project_Predict_Amazon_StockPrice" target="_blank" rel="noopener">Amazon Stock Price Prediction</a></h3>
+            <p>Time-series forecasting model predicting Amazon stock prices from API-sourced historical data, generating weekly predictions with machine learning and Python-based data engineering.</p>
+            <div class="tags"><span class="tag">Time series</span><span class="tag">Forecasting</span><span class="tag">Python</span><span class="tag">APIs</span></div>
+            <a class="project-link" href="https://github.com/stevenwang415/Project_Predict_Amazon_StockPrice" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="thumb"><img src="images/multiclass.webp" alt="Multi-class image classification samples" loading="lazy" /></div>
+          <div class="body">
+            <span class="date">Nov 2021 – Jan 2022</span>
+            <h3><a href="https://github.com/stevenwang415/Project_Image_Classification" target="_blank" rel="noopener">Multi-Class Image Classification</a></h3>
+            <p>Deep learning models (InceptionV3, ResNet152V2) classifying a 20,000-image dataset — top 8th of 44 teams in a Kaggle competition using data augmentation and model ensembling.</p>
+            <div class="tags"><span class="tag">InceptionV3</span><span class="tag">ResNet152V2</span><span class="tag">Kaggle</span><span class="tag">Computer vision</span></div>
+            <a class="project-link" href="https://github.com/stevenwang415/Project_Image_Classification" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact-wrap reveal">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Let's build something together.</h2>
+      <p class="section-intro" style="margin-left:auto;margin-right:auto;">
+        I'm currently open to machine learning and data science opportunities.
+        Reach out — I'd love to talk.
+      </p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="c-label">Email</div>
+          <div class="c-value"><a href="mailto:hsichunw@gmail.com">hsichunw@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="c-label">Phone</div>
+          <div class="c-value"><a href="tel:+12404688390">(240) 468-8390</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="c-label">Location</div>
+          <div class="c-value">Jersey City, NJ</div>
+        </div>
+      </div>
+      <div class="contact-socials">
+        <a href="https://www.linkedin.com/in/hcstevenwang/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-3.37-4-3.11-4 0v5.6h-3v-11h3v1.77c1.4-2.59 7-2.78 7 2.48v6.75z"/></svg>
+        </a>
+        <a href="https://github.com/stevenwang415" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 0c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.14 3 .4c2.29-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.21.7.82.58 4.77-1.59 8.2-6.09 8.2-11.39 0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Hsi-Chun (Steven) Wang · Designed &amp; built with care</div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav-links a').forEach((a) =>
+      a.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'))
+    );
+  </script>
+</body>
 </html>
