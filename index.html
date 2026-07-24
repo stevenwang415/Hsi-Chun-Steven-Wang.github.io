@@ -232,6 +232,30 @@
     }
     .t-item li::before { content: "▸"; position: absolute; left: 0; color: var(--accent); }
 
+    /* ---------- Publication & education ---------- */
+    .pub-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      border-left: 3px solid var(--accent);
+      padding: 30px 32px; max-width: 820px;
+    }
+    .pub-journal {
+      font-family: var(--font-display); font-size: 0.82rem; font-weight: 600;
+      color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .pub-card h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; }
+    .pub-authors { color: var(--text); font-size: 0.95rem; margin-bottom: 12px; }
+    .pub-desc { color: var(--muted); font-size: 0.94rem; }
+    .edu-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px; margin-top: 28px; max-width: 820px;
+    }
+    .edu-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px;
+    }
+    .edu-card h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; margin: 6px 0 2px; }
+    .edu-card .t-org { color: var(--muted); font-size: 0.9rem; }
+
     /* ---------- Projects ---------- */
     .projects-grid {
       display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -328,6 +352,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#publication">Publication</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact" class="nav-cta">Get in touch</a></li>
       </ul>
@@ -340,9 +365,10 @@
       <div class="hero-badge">Open to Machine Learning &amp; Data Science roles</div>
       <h1>Hsi-Chun (Steven) Wang<br /><span class="grad">Machine Learning Engineer</span></h1>
       <p class="tagline">
+        Data scientist and <strong>published researcher in <em>Cancer Letters</em> (2026)</strong>.
         I build <strong>LLM evaluation pipelines</strong>, <strong>NLP systems</strong>, and
-        <strong>cloud-scale ML workflows</strong> — turning messy real-world data into models
-        that ship. Python · R · SQL · PyTorch · AWS.
+        <strong>cloud-deployed ML products</strong> — from biomedical research to a live
+        full-stack language-learning app. Python · PyTorch · FastAPI · AWS · GCP.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">View my work</a>
@@ -368,18 +394,18 @@
         <div class="section-label">About</div>
         <h2 class="section-title">AI &amp; data scientist who ships end-to-end.</h2>
         <p class="section-intro">
-          I'm a Machine Learning Engineer and Data Scientist based in Jersey City, NJ, with 5+ years
-          of Python experience and 2+ years of hands-on machine learning and AI research. My recent
-          work centers on large language models — building evaluation pipelines, fine-tuning frontier
-          models, and validating outputs with rigorous statistical analysis — alongside scalable data
-          engineering on AWS.
+          I'm a data scientist with a Master's in Data Science (University of Maryland) and a
+          published researcher in <em>Cancer Letters</em> (2026). My work spans LLM evaluation
+          pipelines and NLP systems for biomedical and social-science research, and cloud-deployed
+          ML infrastructure — including a production full-stack app I designed, built, and shipped
+          solo. Based in New York, NY.
         </p>
       </div>
       <div class="stats reveal">
-        <div class="stat"><div class="num">5+</div><div class="label">Years of Python experience</div></div>
-        <div class="stat"><div class="num">2+</div><div class="label">Years in ML &amp; AI research</div></div>
-        <div class="stat"><div class="num">2,700</div><div class="label">Drug compounds evaluated with LLM pipeline</div></div>
-        <div class="stat"><div class="num">Top 8</div><div class="label">of 44 teams — Kaggle competition</div></div>
+        <div class="stat"><div class="num">2026</div><div class="label">Published in <em>Cancer Letters</em></div></div>
+        <div class="stat"><div class="num">2,726</div><div class="label">Compounds benchmarked with GPT-4o pipeline</div></div>
+        <div class="stat"><div class="num">400h → 1h</div><div class="label">Drug curation time cut via automated LLM pipelines</div></div>
+        <div class="stat"><div class="num">1</div><div class="label">Production app shipped solo — lyricslearner.com</div></div>
       </div>
     </div>
   </section>
@@ -394,19 +420,19 @@
       <div class="skills-grid reveal">
         <div class="skill-card">
           <h3><span class="dot"></span>Languages</h3>
-          <div class="tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">SQL</span><span class="tag">MATLAB</span></div>
+          <div class="tags"><span class="tag">Python (PyTorch)</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">R</span><span class="tag">MATLAB</span></div>
         </div>
         <div class="skill-card">
           <h3><span class="dot"></span>Machine Learning &amp; LLMs</h3>
-          <div class="tags"><span class="tag">PyTorch</span><span class="tag">GPT-4o fine-tuning</span><span class="tag">OpenAI API</span><span class="tag">BERT</span><span class="tag">scikit-learn</span><span class="tag">CNNs</span></div>
+          <div class="tags"><span class="tag">LLMs</span><span class="tag">GPT-4o fine-tuning</span><span class="tag">OpenAI API</span><span class="tag">HuggingFace</span><span class="tag">BERT</span><span class="tag">NLP</span><span class="tag">Classification</span></div>
         </div>
         <div class="skill-card">
-          <h3><span class="dot"></span>NLP &amp; Data Science</h3>
-          <div class="tags"><span class="tag">Text mining</span><span class="tag">TF-IDF</span><span class="tag">Word2Vec</span><span class="tag">Time-series forecasting</span><span class="tag">Pandas</span><span class="tag">Matplotlib / Seaborn</span></div>
+          <h3><span class="dot"></span>Backend &amp; Data</h3>
+          <div class="tags"><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">SQLAlchemy</span><span class="tag">ETL</span><span class="tag">NoSQL</span><span class="tag">Pandas</span><span class="tag">Time-series forecasting</span></div>
         </div>
         <div class="skill-card">
           <h3><span class="dot"></span>Cloud &amp; Infrastructure</h3>
-          <div class="tags"><span class="tag">AWS S3</span><span class="tag">SageMaker</span><span class="tag">Lambda</span><span class="tag">Athena</span><span class="tag">Docker</span><span class="tag">RabbitMQ / ZeroMQ</span></div>
+          <div class="tags"><span class="tag">AWS (SageMaker, Lambda, Athena, S3, IAM)</span><span class="tag">GCP (Cloud Run)</span><span class="tag">Docker</span><span class="tag">CI/CD</span><span class="tag">Git</span></div>
         </div>
       </div>
     </div>
@@ -421,11 +447,12 @@
       <div class="timeline">
         <div class="t-item reveal">
           <div class="t-date">Apr 2025 – Present</div>
-          <h3>Machine Learning Research Assistant (LLM Development)</h3>
-          <div class="t-org">University of Pittsburgh · Remote</div>
+          <h3>Research Data Scientist</h3>
+          <div class="t-org">University of Pittsburgh, Department of Computational Biology · Remote</div>
           <ul>
-            <li>Designed and executed an LLM evaluation pipeline (OpenAI GPT API) for 2,700 drug compounds, employing rigorous correlation analysis to validate the added value of LitSense-backed evidence over GPT-only scores.</li>
-            <li>Developed custom regression architecture for the LLM4SD model, improving R² by 0.12, and optimized hyperparameters, enhancing predictive accuracy by 18%.</li>
+            <li>Benchmarked GPT-4o across three input conditions on 2,726 compounds for drug-target and pathway prediction, quantifying the impact of input modality on LLM pharmacological reasoning.</li>
+            <li>Formulated a custom regression architecture for the LLM4SD model, improving R² by 0.12, and optimized hyperparameters, enhancing predictive accuracy by 18%.</li>
+            <li>Delegated drug curation to GPT-4o and PubChem APIs via automated Python pipelines, cutting curation time from ~400 hours to under 1 hour for 24,000+ compounds.</li>
           </ul>
         </div>
         <div class="t-item reveal">
@@ -433,8 +460,8 @@
           <h3>Machine Learning Engineer (Contract)</h3>
           <div class="t-org">GearFactory.ai · Remote</div>
           <ul>
-            <li>Engineered a scalable text-mining pipeline using AWS (S3, Athena) and Python to process a 35-year archive of historical Chinese newspapers, enabling geopolitical sentiment analysis.</li>
-            <li>Fine-tuned and evaluated advanced LLMs (GPT-4o series) on the multi-decade corpus, using correlation analysis to validate model output consistency and detect geopolitical sentiment anomalies.</li>
+            <li>Engineered a scalable text-mining pipeline on AWS (S3, Athena) using Python and SQL to query and process a 35-year archive of Chinese newspapers, enabling geopolitical sentiment analysis.</li>
+            <li>Conducted comparative sentiment analysis between CNA (Taiwan) and People's Daily (China) datasets, identifying divergent linguistic framing and thematic shifts during key cross-strait geopolitical events.</li>
           </ul>
         </div>
         <div class="t-item reveal">
@@ -477,21 +504,61 @@
     </div>
   </section>
 
+  <section id="publication">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Publication</div>
+        <h2 class="section-title">Peer-reviewed research</h2>
+      </div>
+      <div class="pub-card reveal">
+        <div class="pub-journal">Cancer Letters · 2026 · Article 218289</div>
+        <h3>High-throughput drug screening for targeting polyploid cancer cells</h3>
+        <p class="pub-authors"><strong>Wang, H.-C.</strong>, et al.</p>
+        <p class="pub-desc">First-author research applying high-throughput screening and computational analysis to identify drug candidates targeting polyploid cancer cells — work rooted in the LLM-driven drug evaluation pipelines I built at the University of Pittsburgh's Department of Computational Biology.</p>
+      </div>
+      <div class="edu-row reveal">
+        <div class="edu-card">
+          <div class="t-date">Sep 2023 – Dec 2024</div>
+          <h3>M.S. Data Science</h3>
+          <div class="t-org">University of Maryland — College Park · GPA 3.8/4.0</div>
+        </div>
+        <div class="edu-card">
+          <div class="t-date">Sep 2019 – Jun 2022</div>
+          <h3>B.S. Civil Engineering</h3>
+          <div class="t-org">National Taiwan University · GPA 3.6/4.0</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="projects" class="alt">
     <div class="container">
       <div class="reveal">
         <div class="section-label">Projects</div>
         <h2 class="section-title">Selected work</h2>
-        <p class="section-intro">Hands-on builds spanning cloud ML platforms, NLP, distributed systems, and computer vision.</p>
+        <p class="section-intro">From a live production app to cloud ML platforms, NLP, distributed systems, and computer vision.</p>
       </div>
       <div class="projects-grid">
         <div class="project-card featured reveal">
+          <div class="thumb"><img src="images/lyricslearner.webp" alt="LyricsLearner — learn languages through music" loading="lazy" /></div>
+          <div class="body">
+            <span class="date">Apr 2026 · Live in production</span>
+            <h3><a href="https://lyricslearner.com" target="_blank" rel="noopener">LyricsLearner — lyricslearner.com</a></h3>
+            <p>Production full-stack language-learning platform serving real-time GPT-4o-mini translations and synchronized lyrics (LrcLib API). React/Vite front end, FastAPI + PostgreSQL back end on Google Cloud Run, with Google OAuth + JWT, cross-device library sync, and a spaced-repetition flashcard system. Optimized LLM inference via prompt caching, response streaming, and structured JSON outputs — cutting per-translation cost ~60% at sub-second latency. Shipped solo, concept to production, with Docker CI/CD auto-deploy.</p>
+            <div class="tags"><span class="tag">React / Vite</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">GPT-4o-mini</span><span class="tag">Cloud Run</span><span class="tag">Docker CI/CD</span></div>
+            <p style="margin:0 0 16px; flex:0;">
+              <a class="project-link" href="https://lyricslearner.com" target="_blank" rel="noopener" style="margin-right:24px;">Visit live site</a>
+              <a class="project-link" href="https://github.com/stevenwang415/lyrics-app" target="_blank" rel="noopener">View on GitHub</a>
+            </p>
+          </div>
+        </div>
+        <div class="project-card reveal">
           <div class="thumb"><img src="images/e-commerce.webp" alt="E-Commerce Predictive Analysis dashboard" loading="lazy" /></div>
           <div class="body">
             <span class="date">Oct 2024 – Dec 2024</span>
             <h3><a href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target="_blank" rel="noopener">E-Commerce Predictive Analysis on AWS</a></h3>
-            <p>Machine learning–driven platform built on AWS (S3, SageMaker, Lambda) to analyze customer behavior and predict purchasing trends — improving product recommendation accuracy by 5% end to end, from raw data to deployed model.</p>
-            <div class="tags"><span class="tag">AWS SageMaker</span><span class="tag">Lambda</span><span class="tag">S3</span><span class="tag">Predictive modeling</span></div>
+            <p>Secure end-to-end ML pipeline on AWS using SageMaker to train and deploy time-series forecasting models (LSTM, SARIMA), with Lambda-automated preprocessing and real-time QuickSight dashboards. Validated SARIMA (MAE 3.76) over LSTM (MAE 4.70) for seasonal sales patterns.</p>
+            <div class="tags"><span class="tag">SageMaker</span><span class="tag">Lambda</span><span class="tag">LSTM / SARIMA</span><span class="tag">QuickSight</span></div>
             <a class="project-link" href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target="_blank" rel="noopener">View on GitHub</a>
           </div>
         </div>
@@ -558,7 +625,7 @@
         </div>
         <div class="contact-item">
           <div class="c-label">Location</div>
-          <div class="c-value">Jersey City, NJ</div>
+          <div class="c-value">New York, NY</div>
         </div>
       </div>
       <div class="contact-socials">
