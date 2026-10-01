@@ -529,6 +529,40 @@
       .app-mock { min-height: 0; padding: 28px 20px; }
     }
 
+    /* ---------- NYC Stoop phone mockup ---------- */
+    .live-pill.ios { background: var(--warm); color: #16120a; }
+    .phone-mock {
+      width: 240px; background: #0b1122; border: 1px solid var(--border-bright);
+      border-radius: 28px; padding: 10px 10px 14px; position: relative;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      transform: perspective(900px) rotateY(3deg) rotateX(2deg);
+      transition: transform 0.35s ease;
+    }
+    .project-card:hover .phone-mock { transform: perspective(900px) rotateY(0) rotateX(0) translateY(-3px); }
+    .phone-notch {
+      width: 78px; height: 16px; background: #04060d; border-radius: 999px;
+      margin: 2px auto 8px;
+    }
+    .phone-screen { padding: 4px 6px 0; }
+    .phone-head { margin-bottom: 12px; }
+    .phone-title { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; }
+    .phone-sub { font-family: var(--font-mono); font-size: 0.66rem; color: var(--muted); margin-top: 2px; }
+    .stop {
+      display: flex; gap: 10px; align-items: flex-start;
+      border-left: 2px solid rgba(148, 163, 184, 0.2);
+      padding: 6px 0 6px 10px; margin-bottom: 2px;
+    }
+    .stop.active { border-left-color: var(--warm); background: rgba(232, 163, 61, 0.06); border-radius: 0 6px 6px 0; }
+    .stop-time { font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent); padding-top: 2px; flex-shrink: 0; }
+    .stop-name { font-size: 0.8rem; font-weight: 600; color: var(--text); }
+    .stop-meta { font-family: var(--font-mono); font-size: 0.62rem; color: var(--muted); margin-top: 1px; }
+    .phone-chips { display: flex; gap: 5px; flex-wrap: wrap; margin: 12px 0 4px; }
+    .phone-chips span {
+      font-family: var(--font-mono); font-size: 0.6rem; color: var(--muted);
+      border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px;
+    }
+    @media (max-width: 799px) { .phone-mock { width: 210px; } }
+
     /* ---------- Contact ---------- */
     .contact-wrap { max-width: 760px; position: relative; }
     .contact-items { display: flex; gap: 46px; flex-wrap: wrap; margin: 40px 0; }
@@ -661,15 +695,15 @@
           I'm a data scientist with a Master's in Data Science (University of Maryland) and a
           published researcher with three 2026 papers — in <em>Cancer Letters</em>, <em>MicroTAS</em>, and <em>ISMB/ECCB</em>. My work spans LLM evaluation
           pipelines and NLP systems for biomedical and social-science research, and cloud-deployed
-          ML infrastructure — including a production full-stack app I designed, built, and shipped
-          solo. Based in New York, NY.
+          ML infrastructure — including two products I designed, built, and shipped
+          solo: NYC Stoop, an iOS travel planner on the App Store, and lyricslearner.com. Based in New York, NY.
         </p>
       </div>
       <div class="stats">
         <div class="stat g-card reveal"><div class="num">3</div><div class="label">Peer-reviewed publications (2026)</div></div>
         <div class="stat g-card reveal"><div class="num">2,726</div><div class="label">Compounds benchmarked with GPT-4o pipeline</div></div>
         <div class="stat g-card reveal"><div class="num">400h → 1h</div><div class="label">Drug curation time cut via automated LLM pipelines</div></div>
-        <div class="stat g-card reveal"><div class="num">1</div><div class="label">Production app shipped solo — lyricslearner.com</div></div>
+        <div class="stat g-card reveal"><div class="num">2</div><div class="label">Products shipped solo — NYC Stoop (iOS) &amp; lyricslearner.com</div></div>
       </div>
     </div>
   </section>
@@ -849,9 +883,36 @@
       <div class="reveal">
         <div class="section-head"><div class="section-label">§ 05 · Selected Work</div></div>
         <h2 class="section-title">Selected work</h2>
-        <p class="section-intro">From a <em>live production app</em> to cloud ML platforms, NLP, distributed systems, and computer vision.</p>
+        <p class="section-intro">Two <em>shipped products</em> — on the App Store and the web — alongside cloud ML platforms, NLP, distributed systems, and computer vision.</p>
       </div>
       <div class="projects-grid">
+        <div class="project-card featured reveal">
+          <div class="thumb app-mock">
+            <span class="live-pill ios">● ON THE APP STORE</span>
+            <div class="phone-mock" role="img" aria-label="NYC Stoop iOS app — one-day Manhattan itinerary">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="phone-head">
+                  <div class="phone-title">NYC Stoop</div>
+                  <div class="phone-sub">Sat · sunny 72° · Budget $$</div>
+                </div>
+                <div class="stop"><span class="stop-time">09:30</span><div><div class="stop-name">Coffee · West Village</div><div class="stop-meta">4 min walk</div></div></div>
+                <div class="stop active"><span class="stop-time">11:00</span><div><div class="stop-name">Whitney Museum</div><div class="stop-meta">Pay-what-you-wish Fri</div></div></div>
+                <div class="stop"><span class="stop-time">17:45</span><div><div class="stop-name">Sunset · Little Island</div><div class="stop-meta">M14 bus · 9 min</div></div></div>
+                <div class="phone-chips"><span>600+ places</span><span>transit routing</span><span>live events</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="body">
+            <span class="date">Fig. 1 · 2026 · Shipped on the App Store</span>
+            <h3><a href="https://apps.apple.com/app/nyc-stoop/id6790237386" target="_blank" rel="noopener">NYC Stoop — iOS travel planner</a></h3>
+            <p>Solo-built iOS travel-planning app: a curated guide to New York with a 600+ place geospatial dataset, a constraint-based itinerary generator, budget-aware day plans, transit routing, live event calendars, and privacy-focused photo sharing. I owned the data schema, itinerary logic, and release pipeline through App Store approval — and executed the build with agentic AI development, defining specifications and validation criteria and reviewing the output of four coordinated agents against them.</p>
+            <div class="tags"><span class="tag">iOS</span><span class="tag">Geospatial data</span><span class="tag">Constraint-based planning</span><span class="tag">Agentic AI development</span><span class="tag">App Store release</span></div>
+            <div class="project-links">
+              <a class="project-link" href="https://apps.apple.com/app/nyc-stoop/id6790237386" target="_blank" rel="noopener">Download on the App Store</a>
+            </div>
+          </div>
+        </div>
         <div class="project-card featured reveal">
           <div class="thumb app-mock">
             <span class="live-pill">● LIVE</span>
@@ -872,7 +933,7 @@
             </div>
           </div>
           <div class="body">
-            <span class="date">Fig. 1 · Apr 2026 · In production</span>
+            <span class="date">Fig. 2 · Apr 2026 · In production</span>
             <h3><a href="https://lyricslearner.com" target="_blank" rel="noopener">LyricsLearner — lyricslearner.com</a></h3>
             <p>Production full-stack language-learning platform serving real-time GPT-4o-mini translations and synchronized lyrics (LrcLib API). React/Vite front end, FastAPI + PostgreSQL back end on Google Cloud Run, with Google OAuth + JWT, cross-device library sync, and a spaced-repetition flashcard system. Optimized LLM inference via prompt caching, response streaming, and structured JSON outputs — cutting per-translation cost ~60% at sub-second latency. Shipped solo, concept to production, with Docker CI/CD auto-deploy.</p>
             <div class="tags"><span class="tag">React / Vite</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">GPT-4o-mini</span><span class="tag">Cloud Run</span><span class="tag">Docker CI/CD</span></div>
@@ -885,7 +946,7 @@
         <div class="project-card reveal">
           <div class="thumb"><img src="images/e-commerce.webp" alt="E-Commerce Predictive Analysis dashboard" loading="lazy" /></div>
           <div class="body">
-            <span class="date">Fig. 2 · Oct 2024 – Dec 2024</span>
+            <span class="date">Fig. 3 · Oct 2024 – Dec 2024</span>
             <h3><a href="https://github.com/stevenwang415/E-Commerce-Predictive-Analysis-using-AWS" target="_blank" rel="noopener">E-Commerce Predictive Analysis on AWS</a></h3>
             <p>Secure end-to-end ML pipeline on AWS using SageMaker to train and deploy time-series forecasting models (LSTM, SARIMA), with Lambda-automated preprocessing and real-time QuickSight dashboards. Validated SARIMA (MAE 3.76) over LSTM (MAE 4.70) for seasonal sales patterns.</p>
             <div class="tags"><span class="tag">SageMaker</span><span class="tag">Lambda</span><span class="tag">LSTM / SARIMA</span><span class="tag">QuickSight</span></div>
@@ -895,7 +956,7 @@
         <div class="project-card reveal">
           <div class="thumb"><img src="images/suicide-risk.webp" alt="Suicide risk classification NLP project" loading="lazy" /></div>
           <div class="body">
-            <span class="date">Fig. 3 · Oct 2024 – Dec 2024</span>
+            <span class="date">Fig. 4 · Oct 2024 – Dec 2024</span>
             <h3><a href="https://github.com/stevenwang415/Suicide-Risk-Classification" target="_blank" rel="noopener">Suicide Risk Classification</a></h3>
             <p>Multi-class classifier using fine-tuned BERT on the UMD Reddit Suicidality Dataset, with advanced feature engineering (TF-IDF, Word2Vec) and hyperparameter tuning for mental-health AI applications.</p>
             <div class="tags"><span class="tag">BERT</span><span class="tag">NLP</span><span class="tag">TF-IDF</span><span class="tag">Word2Vec</span></div>
@@ -905,7 +966,7 @@
         <div class="project-card reveal">
           <div class="thumb"><img src="images/message-queue.webp" alt="Message queue system architecture" loading="lazy" /></div>
           <div class="body">
-            <span class="date">Fig. 4 · Mar 2024 – May 2024</span>
+            <span class="date">Fig. 5 · Mar 2024 – May 2024</span>
             <h3><a href="https://github.com/stevenwang415/Message_Queues_and_Communication" target="_blank" rel="noopener">Message Queues &amp; Communication</a></h3>
             <p>High-performance messaging system containerizing RabbitMQ and ZeroMQ with Docker — improving real-time data processing, reliability, and scalability across distributed services.</p>
             <div class="tags"><span class="tag">RabbitMQ</span><span class="tag">ZeroMQ</span><span class="tag">Docker</span><span class="tag">Distributed systems</span></div>
@@ -915,7 +976,7 @@
         <div class="project-card reveal">
           <div class="thumb"><img src="images/amazon.webp" alt="Amazon stock price prediction charts" loading="lazy" /></div>
           <div class="body">
-            <span class="date">Fig. 5 · Oct 2023 – Dec 2023</span>
+            <span class="date">Fig. 6 · Oct 2023 – Dec 2023</span>
             <h3><a href="https://github.com/stevenwang415/Project_Predict_Amazon_StockPrice" target="_blank" rel="noopener">Amazon Stock Price Prediction</a></h3>
             <p>Time-series forecasting model predicting Amazon stock prices from API-sourced historical data, generating weekly predictions with machine learning and Python-based data engineering.</p>
             <div class="tags"><span class="tag">Time series</span><span class="tag">Forecasting</span><span class="tag">Python</span><span class="tag">APIs</span></div>
@@ -925,7 +986,7 @@
         <div class="project-card reveal">
           <div class="thumb"><img src="images/multiclass.webp" alt="Multi-class image classification samples" loading="lazy" /></div>
           <div class="body">
-            <span class="date">Fig. 6 · Nov 2021 – Jan 2022</span>
+            <span class="date">Fig. 7 · Nov 2021 – Jan 2022</span>
             <h3><a href="https://github.com/stevenwang415/Project_Image_Classification" target="_blank" rel="noopener">Multi-Class Image Classification</a></h3>
             <p>Deep learning models (InceptionV3, ResNet152V2) classifying a 20,000-image dataset — top 8th of 44 teams in a Kaggle competition using data augmentation and model ensembling.</p>
             <div class="tags"><span class="tag">InceptionV3</span><span class="tag">ResNet152V2</span><span class="tag">Kaggle</span><span class="tag">Computer vision</span></div>
